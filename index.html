@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    
+    window.onload = function() {
+
+        var canvas = document.getElementById( "myCanvas" );
+        var contex = canvas.getContext( "2d" );
+    
+        contex.lineWidth = 3;
+        contex.strokeStyle = "red";
+
+        contex.beginPath();
+        contex.arc( canvas.width/2, canvas.height/2 , 200 ,0 , 2*Math.PI );
+        contex.fillStyle = "red";
+        contex.fill();
+        contex.stroke();
+
+        contex.beginPath();
+        contex.font = "100px Arial";
+        contex.fillText("JAPAN!",10,50);
+        contex.stroke();
+    }
+
+</script>
+<body>
+    
+    <canvas id = "myCanvas" width = "1400" height = "700" style = "border: solid 1px black"></canvas>
+
+</body>
+</html>
